@@ -1,5 +1,5 @@
 {
-  "name": "simple-rest",
+  "name": "nodejs-simple-rest",
   "version": "1.0.0",
   "description": "a simple demo rest server",
   "main": "server.js",
