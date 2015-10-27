@@ -1,20 +1,10 @@
   {
-    "user" : {
-      "name" : "steven",
-      "password" : "password1",
-      "profession" : "teacher",
-      "id": 1
-     },
-     "user" : {
-      "name" : "anita",
-      "password" : "password2",
-      "profession" : "librarian",
-      "id": 2
-     },
-     "user" : {
-      "name" : "clark",
-      "password" : "password3",
-      "profession" : "clerk",
-      "id": 3
-     }
+    "users":
+      [
+        {
+          "name": "steven",
+          "email": "e@ma.il",
+          "user_id": 1
+        }
+      ]
   }
