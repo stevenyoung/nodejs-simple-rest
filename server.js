@@ -9,6 +9,8 @@ var app = express()
 // express settings for jade templates
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'jade')
+
+// express settings for static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // express routes:
@@ -20,17 +22,26 @@ app.get('/users', function (req, res) {
   })
 })
 
-// this route renders a jade template
-app.get('/home', function(req, res) {
-  res.render('index')
+// get words from json
+app.get('/words/b', function(req, res) {
+  fs.readFile( __dirname + "/public/" + "b.json", 'utf8', function (err, data) {
+    console.log(err)
+    res.end(data)
+  })
 })
 
 
+
 // this route shows some text and runs a callback after the sending a response
-app.get('/', function(req, res) {
+app.get('/howdy', function(req, res) {
   res.end('howdy', function() {
     console.log(req.route)
   })
+})
+
+// this route renders a jade template
+app.get('/home', function(req, res) {
+  res.render('index')
 })
 
 var server = app.listen(8888, function () {
